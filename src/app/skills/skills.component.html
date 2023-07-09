@@ -1,0 +1,22 @@
+<div class="container mb-3" style="padding-top: 20px;">
+  <div class="row">
+    <div class="col-6 col-md-4 col-lg-3 mb-4" *ngFor="let lenguaje of lenguajes; let i=index">
+      <div class="card">
+        <img [src]="lenguaje.imagen" class="card-img-top" alt="...">
+        <div class="card-body align-items-center">
+          <h5 class="card-title">{{ lenguaje.nombre }}</h5>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-purple" role="progressbar" [style.width.%]="lenguaje.porcentaje" aria-valuemin="0" aria-valuemax="100">
+              {{ lenguaje.porcentaje }}%
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn" (click)="openModal(lenguaje)">Ver habilidades</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-modal [lenguajeSeleccionado]="lenguajeSeleccionado" (closeModal)="closeModal()" *ngIf="showModal"></app-modal>

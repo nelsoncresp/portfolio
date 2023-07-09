@@ -1,0 +1,131 @@
+.modal-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: modal-appear 0.3s ease forwards;
+}
+
+@keyframes modal-appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  padding: 20px;
+  overflow-y: auto; /* Permite desplazamiento vertical */
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-body {
+  padding-top: 10px;
+}
+
+.close {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background-color: #ff0000;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 250px; /* Ajusta esta altura según tus necesidades */
+  margin-bottom: 20px;
+}
+
+/* Media queries */
+@media (max-width: 992px) {
+  .modal-content {
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .modal-dialog {
+    align-items: flex-start;
+  }
+
+  .modal-body {
+    padding-top: 0;
+  }
+
+  .modal-image {
+    max-height: none;
+    width: 100%;
+    height: auto;
+  }
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  color: black;
+  border-bottom: 1px solid #ccc;
+}
+
+.close {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000; /* Color rojo para la "x" */
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}

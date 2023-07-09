@@ -1,0 +1,22 @@
+.card {
+  width: 100%;
+}
+.btn {
+  color: white;
+  background-color: rgb(177, 17, 177);
+}
+.btn:hover {
+  color: white;
+  background-color: rgb(117, 4, 117);
+}
+.progress-bar{
+  color: white;
+  background-color: rgb(177, 17, 177);
+}
+.progress-bar:hover{
+  color: white;
+  background-color: rgb(117, 4, 117);
+}
+.card-title {
+  text-align: center;
+}
